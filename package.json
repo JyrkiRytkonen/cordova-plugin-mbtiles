@@ -1,0 +1,40 @@
+{
+    "name": "com.ginasystem.plugins.mbtiles",
+    "version": "0.7.3",
+    "description": "Testing",
+    "cordova": {
+      "id": "com.ginasystem.plugins.mbtiles",
+      "platforms": [
+        "ios",
+        "android"
+      ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/katzer/cordova-plugin-background-mode.git"
+    },
+    "keywords": [
+      "appplant",
+      "background",
+      "ecosystem:cordova",
+      "cordova-ios",
+      "cordova-android",
+      "cordova-browser"
+    ],
+    "engines": [
+      {
+        "name": "cordova",
+        "version": ">=3.0.0"
+      },
+      {
+        "name": "android-sdk",
+        "version": ">=16"
+      }
+    ],
+    "author": "Sebastián Katzer",
+    "license": "Apache 2.0",
+    "bugs": {
+      "url": "https://github.com/katzer/cordova-plugin-background-mode/issues"
+    },
+    "homepage": "https://github.com/katzer/cordova-plugin-background-mode#readme"
+  }
