@@ -1,15 +1,14 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
 xmlns:android="http://schemas.android.com/apk/res/android"
-           id="com.makina.offline.mbtiles"
+           id="com.ginasystem.plugins.mbtiles"
       version="1.0.0">
 
     <name>MBTilesPlugin</name>
     <description>Cordova MBTiles Plugin</description>
-    <license>Apache 2.0</license>
     <keywords>cordova,mbtiles</keywords>
     
     <!-- dependency id="org.apache.cordova.file@1" /-->
-    <dependency id="org.apache.cordova.file-transfer" version="0.4.2" />
+ <!--   <dependency id="cordova-plugin-file-transfer" version="^1.5.1" /> -->
 
     <!-- android -->
     <platform name="android">
@@ -19,52 +18,20 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="MBTilesPlugin">
-	            <param name="android-package" value="com.makina.offline.mbtiles.MBTilesPlugin"/>
+	            <param name="android-package" value="com.ginasystem.plugins.mbtiles.MBTilesPlugin"/>
 	        </feature>
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"  android:maxSdkVersion="32" />
 	    <uses-permission android:name="android.permission.INTERNET" />
         </config-file>
 
-        <source-file src="src/android/FileUtils.java" target-dir="src/com/makina/offline/mbtiles" />
-        <source-file src="src/android/IMBTilesActions.java" target-dir="src/com/makina/offline/mbtiles" />
-        <source-file src="src/android/MBTilesActionsDatabaseImpl.java" target-dir="src/com/makina/offline/mbtiles" />
-        <source-file src="src/android/MBTilesActionsFileImpl.java" target-dir="src/com/makina/offline/mbtiles" />
-	<source-file src="src/android/MBTilesPlugin.java" target-dir="src/com/makina/offline/mbtiles" />
-	<source-file src="src/android/MBTilesActionsGenImpl.java" target-dir="src/com/makina/offline/mbtiles" />
+        <source-file src="src/android/MBTilesActions.java" target-dir="src/com/ginasystem/plugins/mbtiles" />
+	    <source-file src="src/android/MBTilesPlugin.java" target-dir="src/com/ginasystem/plugins/mbtiles" />
 
     </platform>
-     <platform name="wp8">
-
-	<js-module src="www/MBTilesPlugin.js" name="MBTilesPlugin">
-     	   <clobbers target="window.MBTilesPlugin" />
-    	</js-module>
-
-        <config-file target="config.xml" parent="/*">
-            <feature name="MBTilesPlugin">
-                <param name="wp-package" value="MBTilesPlugin"/>
-            </feature>
-        </config-file>
-
-        <source-file src="src/wp/MBTilesPlugin.cs"/>
-	<source-file src="src/wp/IMBTilesActions.cs"/>
-	<source-file src="src/wp/MBTilesActionsDatabaseImpl.cs"/>
-	<source-file src="src/wp/MBTilesActionsGenImpl.cs"/>
-	<source-file src="src/wp/MBTilesActionsFileImpl.cs"/>
-	<source-file src="src/wp/SQLite.cs"/>
-	<source-file src="src/wp/SQLiteAsync.cs"/>
-	<source-file src="src/wp/TableData.cs"/>
-	<source-file src="src/wp/MBTilesJson.cs"/>
-	<source-file src="src/wp/Database.cs"/>
-	
-	<source-file src="src/wp/res/sqlite-wp80-winrt-3080301.zip"/>
-	
-	<framework src="src/wp/res/SQLite.winmd" custom="true"/>
-	<framework src="src/wp/res/Newtonsoft.Json.dll" custom="true"/>
-</platform>
-
 
     <platform name="ios">
 
@@ -77,36 +44,15 @@ xmlns:android="http://schemas.android.com/apk/res/android"
                 <param name="onload" value="true" />
             </feature>
         </config-file>
-        <header-file src="src/ios/MBTilesAction.h" />
-        <header-file src="src/ios/MBTilesActionsDataBaseImpl.h" />
-        <source-file src="src/ios/MBTilesActionsDataBaseImpl.m" />
+        <header-file src="src/ios/MBTilesActions.h" />
+        <source-file src="src/ios/MBTilesActions.m" />
         <header-file src="src/ios/MBTilesPlugin.h" />
         <source-file src="src/ios/MBTilesPlugin.m" />
         <header-file src="src/ios/MBTilesConstant.h" />
         <source-file src="src/ios/MBTilesConstant.m" />
-	    <header-file src="src/ios/MBTilesActionsFileImpl.h" />
-        <source-file src="src/ios/MBTilesActionsFileImpl.m" />
-        <header-file src="src/ios/MBTilesActionsGenImpl.h" />
-        <source-file src="src/ios/MBTilesActionsGenImpl.m" />
         
         <framework src="libsqlite3.dylib" />
         <framework src="MobileCoreServices.framework" />
         <framework src="AssetsLibrary.framework" />
-    </platform>
-
-    <platform name="blackberry10">
-
-	<js-module src="www/blackberry10/MBTilesPlugin.js" name="MBTilesPlugin">
-     	   <clobbers target="window.MBTilesPlugin" />
-    	</js-module>
-	<source-file src="src/blackberry10/index.js"/>
-        <lib-file src="src/blackberry10/native/device/libMBTilesPlugin.so" arch="device"/>
-        <lib-file src="src/blackberry10/native/simulator/libMBTilesPlugin.so" arch="simulator"/>
-	<config-file target="www/config.xml" parent="/widget">
-            <feature name="com.makina.offline.mbtiles" value="com.makina.offline.mbtiles" />
-	    <rim:permissions>
-	        <rim:permit>access_shared</rim:permit>
-	    </rim:permissions>
-	</config-file>
     </platform>
 </plugin>
