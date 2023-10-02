@@ -1,40 +1,43 @@
 {
-    "name": "com.ginasystem.plugins.mbtiles",
-    "version": "0.7.3",
-    "description": "Testing",
-    "cordova": {
-      "id": "com.ginasystem.plugins.mbtiles",
-      "platforms": [
-        "ios",
-        "android"
-      ]
-    },
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/katzer/cordova-plugin-background-mode.git"
-    },
-    "keywords": [
-      "appplant",
-      "background",
-      "ecosystem:cordova",
-      "cordova-ios",
-      "cordova-android",
-      "cordova-browser"
-    ],
-    "engines": [
-      {
-        "name": "cordova",
-        "version": ">=3.0.0"
+  "name": "cordova-plugin-mbtiles",
+  "version": "8.0.0",
+  "description": "MB Tiles Plugin",
+  "types": "./types/index.d.ts",
+  "cordova": {
+    "id": "cordova-plugin-mbtiles",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": "github:apache/cordova-plugin-mbtiles",
+  "bugs": "https://github.com/apache/cordova-plugin-mbtiles/issues",
+  "keywords": [
+    "cordova"
+  ],
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "eslint ."
+  },
+  "author": "Apache Software Foundation",
+  "license": "Apache-2.0",
+  "engines": {
+    "cordovaDependencies": {
+      "5.0.0": {
+        "cordova-android": ">=6.3.0"
       },
-      {
-        "name": "android-sdk",
-        "version": ">=16"
+      "7.0.0": {
+        "cordova-android": ">=10.0.0"
+      },
+      "8.0.0": {
+        "cordova-android": ">=12.0.0"
+      },
+      "9.0.0": {
+        "cordova": ">100"
       }
-    ],
-    "author": "Sebastián Katzer",
-    "license": "Apache 2.0",
-    "bugs": {
-      "url": "https://github.com/katzer/cordova-plugin-background-mode/issues"
-    },
-    "homepage": "https://github.com/katzer/cordova-plugin-background-mode#readme"
+    }
+  },
+  "devDependencies": {
+    "@cordova/eslint-config": "^5.0.0"
   }
+}
