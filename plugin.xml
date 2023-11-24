@@ -1,42 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-xmlns:android="http://schemas.android.com/apk/res/android"
-           id="cordova-plugin-mbtiles"
-      version="1.0.1">
-
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-mbtiles" version="0.0.1">
     <name>MBTilesPlugin</name>
-    <description>Cordova MBTiles Plugin</description>
+    <description>TODO.</description>
+    <license>MIT</license>
     <keywords>cordova,mbtiles</keywords>
-    
-    <!-- dependency id="org.apache.cordova.file@1" /-->
- <!--   <dependency id="cordova-plugin-mbtiles-transfer" version="^1.5.1" /> -->
+    <repo>https:https://github.com/JyrkiRytkonen/cordova-plugin-mbtiles</repo>
+    <issue>https://github.com/JyrkiRytkonen/cordova-plugin-mbtiles/issues</issue>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+    <js-module src="www/MBTilesPlugin.js" name="MBTilesPlugin">
+        <clobbers target="window.MBTilesPlugin" />
+    </js-module>
 
-    <!-- android -->
     <platform name="android">
-	<js-module src="www/MBTilesPlugin.js" name="MBTilesPlugin">
-     	   <clobbers target="window.MBTilesPlugin" />
-    	</js-module>
-
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="MBTilesPlugin">
 	            <param name="android-package" value="com.ginasystem.plugins.mbtiles.MBTilesPlugin"/>
 	        </feature>
         </config-file>
-
         <config-file target="AndroidManifest.xml" parent="/*">
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
-        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"  android:maxSdkVersion="32" />
-	    <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"  android:maxSdkVersion="32" />
+	        <uses-permission android:name="android.permission.INTERNET" />
         </config-file>
-
-        <source-file src="src/android/MBTilesActions.java" target-dir="src/com/ginasystem/plugins/mbtiles" />
 	    <source-file src="src/android/MBTilesPlugin.java" target-dir="src/com/ginasystem/plugins/mbtiles" />
-
     </platform>
-
-    <platform name="ios">
-
-	<js-module src="www/MBTilesPlugin.js" name="MBTilesPlugin">
-     	   <clobbers target="window.MBTilesPlugin" />
+        <platform name="ios">
+        <js-module src="www/MBTilesPlugin.js" name="MBTilesPlugin">
+            <clobbers target="window.MBTilesPlugin" />
     	</js-module>
         <config-file target="config.xml" parent="/*">
             <feature name="MBTilesPlugin">
@@ -56,3 +50,4 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         <framework src="AssetsLibrary.framework" />
     </platform>
 </plugin>
+

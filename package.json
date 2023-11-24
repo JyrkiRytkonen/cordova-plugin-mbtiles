@@ -1,43 +1,31 @@
+
 {
   "name": "cordova-plugin-mbtiles",
-  "version": "1.0.1",
-  "description": "MB Tiles Plugin",
-  "types": "./types/index.d.ts",
+  "version": "1.0.2",
+  "description": "mbtiles plugin",
   "cordova": {
     "id": "cordova-plugin-mbtiles",
     "platforms": [
-      "android",
-      "ios"
+      "android"
     ]
   },
-  "repository": "github:JyrkiRytkonen/cordova-plugin-mbtiles",
-  "bugs": "https://github.com/JyrkiRytkonen/cordova-plugin-mbtiles/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JyrkiRytkonen/cordova-plugin-mbtiles.git"
+  },
   "keywords": [
-    "cordova"
+    "mbtiles"
   ],
-  "scripts": {
-    "test": "npm run lint",
-    "lint": "eslint ."
-  },
-  "author": "Apache Software Foundation",
-  "license": "Apache-2.0",
-  "engines": {
-    "cordovaDependencies": {
-      "5.0.0": {
-        "cordova-android": ">=6.3.0"
-      },
-      "7.0.0": {
-        "cordova-android": ">=10.0.0"
-      },
-      "8.0.0": {
-        "cordova-android": ">=12.0.0"
-      },
-      "9.0.0": {
-        "cordova": ">100"
-      }
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
     }
+  ],
+  "author": "TODO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JyrkiRytkonen/cordova-plugin-mbtiles/issues"
   },
-  "devDependencies": {
-    "@cordova/eslint-config": "^5.0.0"
-  }
+  "homepage": "https://github.com/JyrkiRytkonen/cordova-plugin-mbtiles/"
 }
