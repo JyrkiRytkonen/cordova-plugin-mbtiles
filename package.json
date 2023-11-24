@@ -10,8 +10,8 @@
       "ios"
     ]
   },
-  "repository": "github:apache/cordova-plugin-mbtiles",
-  "bugs": "https://github.com/apache/cordova-plugin-mbtiles/issues",
+  "repository": "github:JyrkiRytkonen/cordova-plugin-mbtiles",
+  "bugs": "https://github.com/JyrkiRytkonen/cordova-plugin-mbtiles/issues",
   "keywords": [
     "cordova"
   ],
